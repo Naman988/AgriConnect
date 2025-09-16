@@ -1,28 +1,24 @@
 module.exports = {
+  root: true,
   env: {
     es6: true,
     node: true,
-  },
-  parserOptions: {
-    "ecmaVersion": 2018,
   },
   extends: [
     "eslint:recommended",
     "google",
   ],
-  rules: {
-    "no-restricted-globals": ["error", "name", "length"],
-    "prefer-arrow-callback": "error",
-    "quotes": ["error", "double", {"allowTemplateLiterals": true}],
+  parserOptions: {
+    "ecmaVersion": 2018,
   },
-  overrides: [
-    {
-      files: ["**/*.spec.*"],
-      env: {
-        mocha: true,
-      },
-      rules: {},
-    },
-  ],
-  globals: {},
+  rules: {
+    "quotes": ["error", "double"],
+    // This rule prevents errors on Windows machines.
+    "linebreak-style": 0,
+    // This rule allows for longer comment lines.
+    "max-len": ["error", { "code": 120 }],
+    // This allows for things like `express.Router()`.
+    "new-cap": 0,
+  },
 };
+
