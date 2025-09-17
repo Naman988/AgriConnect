@@ -48,7 +48,7 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 @Composable
-fun AgriConnectTheme(
+fun FoodLensTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {

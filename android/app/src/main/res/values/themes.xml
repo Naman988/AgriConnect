@@ -1,19 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.AgriConnect" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.FoodLens" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-    </style>
-
-    <!-- The theme for the splash screen -->
-    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
-        <!-- Set the splash screen background color by referencing our color resource -->
-        <item name="windowSplashScreenBackground">@color/splash_background</item>
-
-        <!-- Set the splash screen icon -->
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
-
-        <!-- Set the theme of the app that follows the splash screen -->
-        <item name="postSplashScreenTheme">@style/Theme.AgriConnect</item>
     </style>
 </resources>
 
