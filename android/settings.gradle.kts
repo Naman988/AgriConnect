@@ -1,24 +1,27 @@
-pluginManagement {
+// settings.gradle.kts
+dependencyResolutionManagement {
+    // Disallow repositories in project build scripts; centralize them here.
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+
     repositories {
-        google {
-            content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
-                includeGroupByRegex("androidx.*")
-            }
-        }
+        google()
         mavenCentral()
-        gradlePluginPortal()
+        // add other repos if you need (jitpack etc.)
     }
 }
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+
+pluginManagement {
     repositories {
+        gradlePluginPortal()
         google()
         mavenCentral()
     }
 }
 
+plugins {
+    // keep plugin versions centralized here if desired
+    // (optional — you can also use version catalog or declare plugin versions per-plugin)
+}
+
 rootProject.name = "AgriConnect"
 include(":app")
- 
